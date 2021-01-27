@@ -9,11 +9,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="inputNumero">Entre com um número inteiro</label>
-                                <input type="email" class="form-control" id="inputNumero" placeholder="Número" v-model="numero">
+                                <input type="number" class="form-control" id="inputNumero" placeholder="Número" v-model="numero">
                             </div>
                         </div>
                         <button class="btn btn-primary" v-bind:disabled="numero == ''" @click="calcularInteiro">Calcular</button>
-                        <button class="btn btn-secondary" v-bind:disabled="numero == ''">Limpar</button>
+                        <button class="btn btn-secondary" v-bind:disabled="numero == ''" @click="limparCampo">Limpar</button>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <div class="card-header">Resultado</div>
 
                     <div class="card-body table-responsive" style="text-align: center">
-                        <h3>Somatório é: {{resultado}}</h3>
+                        <h1 style="font-weight: bold"> Somatório é: {{resultado}}</h1>
                     </div>
                 </div>
             </div>
@@ -60,6 +60,13 @@ export default {
                 self.resultado = response.data;
 
             });
+        },
+
+        limparCampo: function (){
+            var self = this;
+
+            self.numero = '';
+            self.resultado = 0;
         }
 
     },
@@ -67,7 +74,7 @@ export default {
     data: function (){
         return {
             numero: '',
-            resultado: ''
+            resultado: 0
         }
     }
 }

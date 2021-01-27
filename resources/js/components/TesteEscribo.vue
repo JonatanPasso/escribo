@@ -25,7 +25,7 @@
                     <div class="card-header">Resultado</div>
 
                     <div class="card-body table-responsive" style="text-align: center">
-                        <h1 style="font-weight: bold"> Somatório é: {{resultado}}</h1>
+                        <h1 style="font-weight: bold"> Somatório é: <span style="color: #1d68a7">{{resultado}}</span></h1>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@
                     número passado.</p>
                 <p class="card-text">Para realizar o teste, foi elaborado uma arquitetura com
                 Framawork Laravel 7 e Vue.Js 2.5 e PHP 7</p>
-                <p class="card-text">GIT HUB: </p>
+                <p class="card-text">GitHub: https://github.com/JonatanPasso/escribo</p>
 
             </div>
         </div>
